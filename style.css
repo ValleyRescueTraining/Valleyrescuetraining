@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
   background: #000;
   color: #fff;
+  line-height: 1.6;
 }
 
 /* NAVBAR */
@@ -44,6 +45,7 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -98,6 +100,7 @@ body {
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .btn-primary {
@@ -131,6 +134,11 @@ section {
 
 h2 {
   margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+h3 {
+  margin-top: 0;
 }
 
 /* COURSE CARDS */
@@ -168,7 +176,7 @@ h2 {
   color: #ccc;
 }
 
-/* SPECIALTIES SECTION (NEW 🔥) */
+/* SPECIALTIES */
 .specialties h3 {
   margin-bottom: 10px;
 }
@@ -181,6 +189,16 @@ h2 {
 .specialties .btn {
   margin-top: 15px;
   display: inline-block;
+}
+
+/* CREDIBILITY */
+.credibility h3 {
+  margin-bottom: 10px;
+}
+
+.credibility p {
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 /* BOOKING GRID */
@@ -246,5 +264,9 @@ h2 {
 
   .hero-subtitle {
     font-size: 1.05rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
   }
 }
