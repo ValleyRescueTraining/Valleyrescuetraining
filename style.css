@@ -168,7 +168,7 @@ h2 {
   color: #ccc;
 }
 
-/* BOOKING */
+/* BOOKING GRID (THIS FIXES YOUR ISSUE) */
 .booking-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -199,6 +199,7 @@ h2 {
   border: 2px solid #d71920;
 }
 
+/* CONTACT LINKS */
 .contact a {
   color: #fff;
 }
@@ -207,11 +208,11 @@ h2 {
   color: #d71920;
 }
 
-/* MOBILE */
+/* MOBILE FIXES */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav-links {
