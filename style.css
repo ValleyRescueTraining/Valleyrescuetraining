@@ -9,11 +9,54 @@ body {
   color: #fff;
 }
 
-.container {
-  width: min(1100px, 92%);
-  margin: auto;
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.95);
+  padding: 15px 20px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
 }
 
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #d71920;
+}
+
+.nav-btn {
+  background: #d71920;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -42,6 +85,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* BUTTONS */
 .btn {
   padding: 14px 24px;
   border-radius: 8px;
@@ -59,6 +103,12 @@ body {
   color: #fff;
 }
 
+/* CONTENT */
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
+}
+
 section {
   padding: 70px 0;
 }
@@ -67,6 +117,7 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* CARDS */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -80,6 +131,7 @@ h2 {
   text-align: center;
 }
 
+/* PRICING */
 .price-list {
   margin-top: 20px;
 }
@@ -95,42 +147,4 @@ h2 {
   margin-top: 15px;
   font-style: italic;
   color: #ccc;
-}
-.navbar {
-  position: sticky;
-  top: 0;
-  background: rgba(0,0,0,0.9);
-  padding: 15px 20px;
-  z-index: 1000;
-  border-bottom: 1px solid #222;
-}
-
-.nav-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-logo {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-btn {
-  background: #d71920;
-  padding: 8px 14px;
-  border-radius: 6px;
 }
