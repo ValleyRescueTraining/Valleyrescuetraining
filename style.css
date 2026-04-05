@@ -168,7 +168,22 @@ h2 {
   color: #ccc;
 }
 
-/* BOOKING GRID (THIS FIXES YOUR ISSUE) */
+/* SPECIALTIES SECTION (NEW 🔥) */
+.specialties h3 {
+  margin-bottom: 10px;
+}
+
+.specialties p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.specialties .btn {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+/* BOOKING GRID */
 .booking-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -208,7 +223,7 @@ h2 {
   color: #d71920;
 }
 
-/* MOBILE FIXES */
+/* MOBILE */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
