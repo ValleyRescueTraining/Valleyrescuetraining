@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0b0b0b;
+    color: #ffffff;
+}
+
+header {
+    background: linear-gradient(135deg, #7a0000, #ff1a1a);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #222;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.classes, .pricing, .contact {
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 28px;
+    border-left: 5px solid red;
+    padding-left: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+    font-size: 16px;
+}
+
+.contact p {
+    font-size: 18px;
+}
