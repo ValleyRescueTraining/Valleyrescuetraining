@@ -1,67 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #0b0b0b;
-    color: #ffffff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
 }
 
-header {
-    background: linear-gradient(135deg, #7a0000, #ff1a1a);
-    text-align: center;
-    padding: 80px 20px;
+.container {
+  width: min(1100px, 92%);
+  margin: auto;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(220,20,20,0.3), transparent 50%), #000;
+  padding: 40px 20px;
 }
 
-header p {
-    font-size: 18px;
+.hero-logo {
+  width: min(700px, 90%);
+  margin-bottom: 30px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: 0.3s;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.btn:hover {
-    background: #222;
+.btn-primary {
+  background: #d71920;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 section {
-    padding: 50px 20px;
-}
-
-.classes, .pricing, .contact {
-    max-width: 900px;
-    margin: auto;
+  padding: 70px 0;
 }
 
 h2 {
-    font-size: 28px;
-    border-left: 5px solid red;
-    padding-left: 10px;
+  margin-bottom: 20px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-li {
-    padding: 12px 0;
-    border-bottom: 1px solid #333;
-    font-size: 16px;
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.contact p {
-    font-size: 18px;
+.price-list {
+  margin-top: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.pricing-note {
+  margin-top: 15px;
+  font-style: italic;
+  color: #ccc;
 }
