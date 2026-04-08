@@ -308,3 +308,44 @@ h3 {
     min-height: 100px;
   }
 }
+/* HERO NOTE (new line under buttons) */
+.hero-note {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.hero-note a {
+  color: #d71920;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-note a:hover {
+  text-decoration: underline;
+}
+
+/* CTA BAND IMPROVEMENT */
+.cta-band {
+  background: linear-gradient(90deg, #0a0a0a, #140000);
+  text-align: center;
+}
+
+.cta-band p {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+/* OPEN CLASSES CLEANUP */
+.open-classes .booking-card small {
+  display: block;
+  margin-top: 5px;
+  color: #bbb;
+  font-weight: normal;
+}
+
+/* HIGHLIGHT IMPORTANT CARD */
+.highlight {
+  border: 2px solid #d71920;
+  box-shadow: 0 0 10px rgba(215, 25, 32, 0.3);
+}
