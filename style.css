@@ -201,6 +201,22 @@ h3 {
   color: #ccc;
 }
 
+/* OPEN CLASSES */
+.open-classes p {
+  color: #ccc;
+}
+
+/* CTA BAND */
+.cta-band {
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.cta-band p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
 /* BOOKING GRID */
 .booking-grid {
   display: grid;
