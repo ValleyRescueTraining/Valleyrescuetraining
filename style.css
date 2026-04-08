@@ -337,3 +337,25 @@ h3 {
     min-height: 100px;
   }
 }
+/* FORCE OVERRIDE ALL LINK STATES (fix purple links on iPhone/Safari) */
+a,
+a:visited,
+a:active,
+a:focus {
+  color: inherit;
+}
+
+/* Then re-style the specific one you WANT red */
+.hero-note a,
+.hero-note a:visited,
+.hero-note a:active,
+.hero-note a:focus {
+  color: #d71920 !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-note a:hover {
+  color: #ff3b3b !important;
+  text-decoration: underline;
+}
