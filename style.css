@@ -290,3 +290,83 @@ a:hover {
     font-size: 1.7rem;
   }
 }
+/* =========================
+   STUDENT CHECK-IN PAGE
+========================= */
+
+.student-checkin-page {
+  padding: 80px 0;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(215, 25, 32, 0.15), transparent 60%), #000;
+}
+
+.checkin-logo {
+  width: min(400px, 80%);
+  margin-bottom: 25px;
+}
+
+.student-checkin-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.checkin-text {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ccc;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* EMBED CONTAINER */
+.tally-embed {
+  margin-top: 30px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #222;
+  box-shadow: 0 0 25px rgba(215, 25, 32, 0.15);
+}
+
+/* EMBED FRAME */
+.tally-embed iframe {
+  width: 100%;
+  height: 1200px;
+  border: none;
+  background: #000;
+}
+
+/* FALLBACK LINK */
+.checkin-fallback {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.checkin-fallback a {
+  color: #d71920;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.checkin-fallback a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .student-checkin-page {
+    padding: 50px 15px;
+  }
+
+  .student-checkin-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .checkin-text {
+    font-size: 0.95rem;
+  }
+
+  .tally-embed iframe {
+    height: 1400px; /* taller for mobile scroll */
+  }
+}
