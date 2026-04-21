@@ -200,6 +200,37 @@ h2 {
   margin: 0 auto 20px;
 }
 
+.open-classes .booking-card {
+  text-align: left;
+  padding: 22px;
+  transition: 0.25s ease;
+}
+
+.open-classes .booking-card strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.open-classes .booking-card small {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.open-classes .booking-card:hover {
+  background: #d71920;
+  transform: translateY(-4px);
+}
+
+.open-classes .booking-card:hover small {
+  color: #fff;
+}
+
 /* CTA BAND */
 .cta-band {
   background: linear-gradient(90deg, #0a0a0a, #140000);
@@ -237,7 +268,7 @@ h2 {
   transform: translateY(-3px);
 }
 
-/* 🔥 MONEY BUTTON */
+/* HIGHLIGHT */
 .highlight {
   border: 2px solid #d71920;
   box-shadow: 0 0 15px rgba(215, 25, 32, 0.35);
@@ -266,30 +297,6 @@ a:hover {
   color: #d71920;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-links {
-    justify-content: center;
-  }
-
-  .price-row {
-    flex-direction: column;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 60px 20px;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-}
 /* =========================
    STUDENT CHECK-IN PAGE
 ========================= */
@@ -352,8 +359,34 @@ a:hover {
   text-decoration: underline;
 }
 
-/* MOBILE OPTIMIZATION */
+/* MOBILE */
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .price-row {
+    flex-direction: column;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .open-classes .booking-card {
+    text-align: center;
+  }
+
   .student-checkin-page {
     padding: 50px 15px;
   }
@@ -367,6 +400,6 @@ a:hover {
   }
 
   .tally-embed iframe {
-    height: 1400px; /* taller for mobile scroll */
+    height: 1400px;
   }
 }
