@@ -716,6 +716,28 @@ a:hover {
 
 }
 
+.product-image {
+
+  width: 100%;
+
+  max-width: 220px;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+
+  margin: 0 auto 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid #222;
+
+}
+
 .product-status {
 
   display: inline-block;
