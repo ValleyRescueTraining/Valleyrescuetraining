@@ -957,3 +957,30 @@ a:hover {
   }
 
 }
+.product-gallery {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.product-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.product-gallery::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+.product-gallery .product-image {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;
+  scroll-snap-align: center;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.08);
+}
