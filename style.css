@@ -98,6 +98,26 @@ body {
 
 }
 
+.nav-btn-secondary {
+
+  border: 2px solid #fff;
+
+  padding: 7px 13px;
+
+  border-radius: 6px;
+
+  color: #fff !important;
+
+}
+
+.nav-btn-secondary:hover {
+
+  background: #fff;
+
+  color: #000 !important;
+
+}
+
 /* HERO */
 
 .hero {
@@ -346,7 +366,7 @@ h3 {
 
 }
 
-/* OPEN CLASSES */
+/* OPEN / UPCOMING CLASSES */
 
 .open-classes {
 
@@ -415,6 +435,46 @@ h3 {
 .open-classes .booking-card:hover small {
 
   color: #fff;
+
+}
+
+.class-passed {
+
+  opacity: 0.45;
+
+  filter: grayscale(100%);
+
+  cursor: not-allowed;
+
+  pointer-events: none;
+
+}
+
+.class-passed strong,
+
+.class-passed small:not(.class-status) {
+
+  text-decoration: line-through;
+
+}
+
+.class-status {
+
+  text-decoration: none !important;
+
+  display: inline-block !important;
+
+  margin-top: 10px;
+
+  color: #fff !important;
+
+  background: #333;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-weight: bold !important;
 
 }
 
@@ -896,26 +956,4 @@ a:hover {
 
   }
 
-}
-.class-passed {
-  opacity: 0.45;
-  filter: grayscale(100%);
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.class-passed strong,
-.class-passed small:not(.class-status) {
-  text-decoration: line-through;
-}
-
-.class-status {
-  text-decoration: none !important;
-  display: inline-block !important;
-  margin-top: 10px;
-  color: #fff !important;
-  background: #333;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-weight: bold !important;
 }
