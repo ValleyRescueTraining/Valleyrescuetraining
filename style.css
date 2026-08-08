@@ -1353,6 +1353,10 @@ a:hover {
 
     justify-content: center;
 
+    gap: 10px 14px;
+
+    font-size: 0.9rem;
+
   }
 
   .price-row {
