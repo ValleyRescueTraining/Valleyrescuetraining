@@ -51,6 +51,8 @@
     if (url.hostname === "cal.com") {
       eventName = "registration_click";
       parameters.course = link.querySelector("strong")?.textContent.trim() || "scheduled_class";
+    } else if (url.pathname.startsWith("/science")) {
+      eventName = "science_page_click";
     } else if (link.matches(".course-card, .directory-card")) {
       eventName = "course_page_click";
       parameters.course = url.pathname.split("/").filter(Boolean).pop() || "courses";
