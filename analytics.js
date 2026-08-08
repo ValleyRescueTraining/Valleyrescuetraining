@@ -53,6 +53,8 @@
       parameters.course = link.querySelector("strong")?.textContent.trim() || "scheduled_class";
     } else if (url.pathname.startsWith("/science")) {
       eventName = "science_page_click";
+    } else if (url.pathname.startsWith("/preclass/acls")) {
+      eventName = "acls_readiness_click";
     } else if (url.pathname.startsWith("/knowledge-check")) {
       eventName = "knowledge_check_click";
     } else if (link.matches(".course-card, .directory-card")) {
