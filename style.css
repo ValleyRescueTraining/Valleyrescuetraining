@@ -4,6 +4,11 @@
 
 }
 
+:focus-visible {
+  outline: 3px solid #ff5a5f;
+  outline-offset: 3px;
+}
+
 body {
 
   margin: 0;
@@ -354,7 +359,8 @@ h3 {
 
 }
 
-.course-card {
+.course-card,
+.linked-card {
   display: block;
   color: inherit;
   text-decoration: none;
@@ -362,7 +368,9 @@ h3 {
 }
 
 .course-card:hover,
-.course-card:focus-visible {
+.course-card:focus-visible,
+.linked-card:hover,
+.linked-card:focus-visible {
   transform: translateY(-3px);
   border-color: #d71920;
   background: #151515;
@@ -525,6 +533,81 @@ h3 {
 
 .site-footer a {
   color: #ccc;
+}
+
+.site-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+  text-align: left;
+}
+
+.site-footer-grid > div {
+  line-height: 1.9;
+}
+
+.course-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.directory-card {
+  display: block;
+  min-height: 245px;
+  padding: 28px;
+  color: #fff;
+  text-decoration: none;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.directory-card.featured {
+  border-color: #d71920;
+  background: linear-gradient(145deg, rgba(215, 25, 32, 0.16), #111 58%);
+}
+
+.directory-card:hover,
+.directory-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: #d71920;
+  background-color: #161616;
+}
+
+.directory-card p {
+  color: #bbb;
+}
+
+.directory-card > span:last-child {
+  display: inline-block;
+  margin-top: 16px;
+  color: #ff5a5f;
+  font-weight: bold;
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-list details {
+  padding: 20px 22px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 12px;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-list p {
+  margin: 14px 0 0;
+  color: #bbb;
 }
 
 /* PRICING */
@@ -1118,6 +1201,11 @@ a:hover {
     width: 100%;
   }
 
+  .site-footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   .open-classes .booking-card {
 
     text-align: center;
@@ -1164,6 +1252,17 @@ a:hover {
 
   }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 .product-gallery {
   display: flex;
