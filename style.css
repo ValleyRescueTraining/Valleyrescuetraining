@@ -634,6 +634,148 @@ h3 {
   background: #b81419;
 }
 
+/* SCIENCE & UPDATES */
+
+.science-preview {
+  background: linear-gradient(120deg, #080808, #130000 70%);
+  border-block: 1px solid #242424;
+}
+
+.science-preview .container {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.science-preview-copy > p:not(.course-eyebrow) {
+  max-width: 650px;
+  color: #bbb;
+  margin-bottom: 24px;
+}
+
+.science-preview-list {
+  display: grid;
+  gap: 12px;
+}
+
+.science-card {
+  display: grid;
+  gap: 4px;
+  padding: 18px 20px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid #303030;
+  border-radius: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.science-card:hover,
+.science-card:focus-visible {
+  transform: translateX(4px);
+  border-color: #d71920;
+}
+
+.science-card span,
+.science-meta {
+  color: #999;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.science-hero {
+  background: radial-gradient(circle at 18% 0%, rgba(215, 25, 32, 0.28), transparent 40%), radial-gradient(circle at 90% 20%, rgba(255,255,255,0.05), transparent 28%), #050505;
+}
+
+.science-status {
+  padding: 18px 20px;
+  background: #0d0d0d;
+  border-bottom: 1px solid #242424;
+}
+
+.science-status .course-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.science-status strong { color: #fff; }
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #4dce79;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(77,206,121,0.7);
+}
+
+.science-grid,
+.source-grid,
+.label-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 20px;
+}
+
+.science-update,
+.label-guide article {
+  padding: 28px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+}
+
+.science-update.featured { border-color: #d71920; }
+.science-update p:not(.science-meta),
+.label-guide p { color: #bbb; }
+
+.science-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.science-label.guidance { background: rgba(77,206,121,0.14); color: #73e397; border: 1px solid rgba(77,206,121,0.4); }
+.science-label.evidence { background: rgba(83,156,255,0.14); color: #7db4ff; border: 1px solid rgba(83,156,255,0.4); }
+.science-label.research { background: rgba(244,183,64,0.14); color: #f4c567; border: 1px solid rgba(244,183,64,0.4); }
+.science-label.valley { background: rgba(215,25,32,0.15); color: #ff696e; border: 1px solid rgba(215,25,32,0.45); }
+
+.source-link { color: #ff5a5f; font-weight: bold; }
+
+.source-card {
+  display: block;
+  padding: 25px;
+  color: #fff;
+  text-decoration: none;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.source-card:hover,
+.source-card:focus-visible { transform: translateY(-3px); border-color: #d71920; }
+.source-card > span { color: #ff5a5f; font-size: 0.78rem; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; }
+.source-card p { color: #bbb; }
+.source-card strong { color: #ff5a5f; }
+
+.science-disclaimer {
+  padding: 20px 22px;
+  color: #bbb;
+  background: #111;
+  border-left: 3px solid #d71920;
+}
+
 /* PRICING */
 
 .price-list {
@@ -1228,6 +1370,11 @@ a:hover {
   .site-footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .science-preview .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .open-classes .booking-card {
