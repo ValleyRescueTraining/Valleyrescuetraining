@@ -22,6 +22,12 @@
   tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
   document.head.appendChild(tag);
 
+  if (window.location.pathname.replace(/\/$/, "") === "/request/thank-you") {
+    window.gtag("event", "training_request_submitted", {
+      page_path: window.location.pathname
+    });
+  }
+
   document.addEventListener("click", function (event) {
     var link = event.target.closest("a[href]");
     if (!link) return;
