@@ -51,8 +51,17 @@
     if (url.hostname === "cal.com") {
       eventName = "registration_click";
       parameters.course = link.querySelector("strong")?.textContent.trim() || "scheduled_class";
+    } else if (link.matches(".course-card")) {
+      eventName = "course_page_click";
+      parameters.course = url.pathname.split("/").filter(Boolean).pop() || "courses";
     } else if (url.pathname === "/request" || href === "#request-training" || url.hostname === "tally.so" && window.location.pathname === "/request/") {
       eventName = "training_request_click";
+      if (link.closest(".course-actions")) {
+        parameters.course = window.location.pathname.split("/").filter(Boolean).pop() || "home";
+      }
+    } else if (link.closest(".course-actions")) {
+      eventName = "course_cta_click";
+      parameters.course = window.location.pathname.split("/").filter(Boolean).pop() || "home";
     } else if (url.protocol === "tel:") {
       eventName = "phone_click";
     } else if (url.protocol === "mailto:") {

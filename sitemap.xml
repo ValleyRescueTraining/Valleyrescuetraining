@@ -12,4 +12,24 @@
     <loc>https://valleyrescuetraining.com/store/</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://valleyrescuetraining.com/courses/heartsaver-first-aid-cpr-aed/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://valleyrescuetraining.com/courses/bls/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://valleyrescuetraining.com/courses/acls/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://valleyrescuetraining.com/courses/pals/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://valleyrescuetraining.com/courses/stop-the-bleed/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
