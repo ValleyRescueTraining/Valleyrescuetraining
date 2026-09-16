@@ -1,26 +1,48 @@
 # VRT equipment store — implementation checkpoint
 
-## Goal and decisions
-Extend the existing GitHub Pages store with individual products, workplace packages, Penn Care product photography, Stripe payment options and shipping-aware ordering. Owner's name is **Zack**. Preserve current logo, red/black branding, courses, booking, check-in, analytics and working sticker payment link. No refurbished or OnSite AED listings.
+## Goal
+Finish the existing GitHub Pages store with individual products, workplace packages, supplier images, Stripe checkout, shipping and pickup. Owner: Zack. Preserve existing branding, training, booking, analytics and sticker checkout. No refurbished or OnSite AED listings.
 
-## Implemented on codex/equipment-store
-- 16 individual product cards with SKU, concise source-grounded details and retail prices or quote requests.
-- Prices: kits $59/$79/$135; FRx $2,199; pads $85; CAT $35; dressings $11/$14; mask $10; QuikClot $45.
-- Three quote-based packages: AED Setup, Small-Business Readiness, Workplace Response.
-- Accessible category filters; responsive store-only stylesheet.
-- Item-specific email inquiry links to valleyrescuetraining@outlook.com. Equipment checkout is NOT enabled yet.
-- Existing sticker Stripe checkout retained.
-- Conditional pay-over-time language without unverified provider logos or installment amounts.
-- Pickup by arrangement; shipping confirmed before payment. No universal free shipping promise.
+## Completed
+- Draft PR #13 on codex/equipment-store: 16 individual listings, three quote-based packages, responsive styling and accessible category filters.
+- Fifteen optimized local product images. Three bleeding-kit images are supplier contents labels and are explicitly captioned. Cabinet image explains AED and case are separate.
+- Verified local image paths and alt text; JavaScript syntax check passed.
+- Stripe connection verified September 16, 2026. Created 16 equipment products; 10 have fixed USD prices. Six accessories/workplace items remain quote-only.
+- Existing training and sticker products and payment links unchanged.
+- Klarna available/enabled in default direct-account payment configuration. Affirm preference on but unavailable; capability inactive.
+- No new equipment payment links created; no equipment checkout enabled; live site unchanged.
 
-## Incomplete / launch checks
-1. Images: four exact supplier image URLs are referenced for Basic/Intermediate/Advanced kits and FRx. They are provisional external URLs, not downloaded assets. Penn Care's browser page returned a security verification challenge; downloads returned HTTP 403. Obtain the source assets and store optimized local copies before launch. Other product photos remain to be sourced. Do not use inaccurate substitute photos.
-2. Stripe: the user's visible app showed an authenticated dashboard, but the agent-controlled cloud browser remained at sign-in after verification. No Stripe account changes, payment links, financing-provider checks, or shipping configuration were made. The user entered a code in chat; it was not used or retained.
-3. Execution environment disconnected before local implementation could run. Changes were instead committed through GitHub tools. No browser visual QA or functional runtime tests have run.
-4. Confirm exact FRx bundle (child key and extra pads) and supplier accessory costs when Grayson replies. Accessory and bundle prices remain quote-only.
-5. Before publication: run desktop/mobile visual QA, category filter and image-failure checks, verify email links/anchors, then merge through existing GitHub Pages workflow.
-6. Replace inquiry CTAs with validated Stripe links only after fulfillment/shipping and product eligibility are configured. Retain quote flow for unresolved items.
-7. Do not put supplier costs, private correspondence or account credentials into this public repository.
+## Remaining
+1. Confirm tax collection setup before enabling checkout. Do not enable automatic_tax without a confirmed active registration. Registration information must be confirmed with Zack.
+2. Finalize shipping charges and free arranged pickup; avoid promising universal free shipping. Shipping currently quote-before-payment.
+3. Create and verify equipment payment links, replace fixed-price inquiry buttons, preserve quote-based accessory/package ordering.
+4. Add product image URLs in Stripe after the site assets are publicly available.
+5. Complete rendered mobile/desktop and checkout verification, then publish via existing GitHub Pages workflow.
+6. Optional missing image: 4-inch trauma dressing (manufacturer 30-0031). Keep text-only until exact image is obtained.
+7. Supplier follow-up: FRx child-key/extra-pads offer, accessory and bundle costs, lead times and approved product photo use.
+8. Payment-provider follow-up: confirm Affirm inactive reason with Stripe; educational-services category 8299 is restricted per https://docs.stripe.com/payments/affirm. Do not change business classification merely to gain eligibility. Confirm provider eligibility for added equipment sales before promoting provider-specific financing.
+
+## Stripe catalog mapping
+These are public-facing product/price identifiers, not credentials.
+
+| Listing | Product | Default price |
+| --- | --- | --- |
+| basic | vrt_basic_05483201 | price_1UGNdvHwSDiI58t1XTiK47t9 |
+| intermediate | vrt_intermediate_05483202 | price_1UGNewHwSDiI58t1UCvyPekj |
+| advanced | vrt_advanced_05483203 | price_1UGNf4HwSDiI58t1TWli4l33 |
+| frx | vrt_frx_033156C01 | price_1UGNfCHwSDiI58t1infZt2lc |
+| pads | vrt_pads_0338811 | price_1UGNfIHwSDiI58t1JiQIZAap |
+| cat | vrt_cat_02123023 | price_1UGNfOHwSDiI58t1mPCmpKy7 |
+| etd4 | vrt_etd4_07402931 | price_1UGNfUHwSDiI58t1fJr8E71v |
+| etd6 | vrt_etd6_07402932 | price_1UGNfbHwSDiI58t1t9SpgjlF |
+| mask | vrt_mask_013167W | price_1UGNfiHwSDiI58t1a1EHtzB2 |
+| gauze | vrt_gauze_0732740 | price_1UGNfoHwSDiI58t12Np01nHx |
+| cabinet | vrt_cabinet_0337021 | Quote only |
+| bracket | vrt_bracket_033701A | Quote only |
+| sign | vrt_sign_03448520 | Quote only |
+| firstaid25 | vrt_firstaid25_073313U | Quote only |
+| firstaid50 | vrt_firstaid50_0702611 | Quote only |
+| station | vrt_station_075032AD | Quote only |
 
 ## Source pages
 - Kits: https://www.penncare.net/product/kit-bleeding-control/
@@ -36,22 +58,6 @@ Extend the existing GitHub Pages store with individual products, workplace packa
 - First aid: https://www.penncare.net/product/first-aid-kit/ and https://www.penncare.net/product/first-aid-kit-3/
 - Station: https://www.penncare.net/product/public-bleeding-control-station-8-pack-vacuum-sealed-clear-polycarbonate-case/
 
+
 ## Resume
-Fetch codex/equipment-store (the local clone may predate remote commits). Review store/index.html, store/store.css and store/store.js. Complete checks above; the live main branch is unchanged.
-
-## Image batch received
-Zack uploaded the FRx product photo and three supplier kit contents labels. These have been inspected, optimized as WebP, and integrated as local site assets. Kit labels are explicitly captioned, not represented as product photos. Environment access recovered; continuing QA. Remaining individual-product photos and Stripe checkout are outstanding.
-
-Second batch: matching FRx pads and orange CAT photos added locally. Blue/black tourniquet variants excluded from orange listing. 30-0023OR.jpg failed upload; alternate 30-0023OR-2.jpg is usable. Local preview browser connection blocked; visual QA still outstanding.
-
-Third batch: verified 30-0032 6-inch dressing photo and integrated local WebP. Four-inch dressing image still needed.
-
-## Additional supplied photos — September 16
-- Added optimized local pocket-mask, QuikClot, cabinet, wall-bracket and triangular-sign images. Cabinet caption clarifies AED and case are separate.
-- Matched cabinet MPN 989803136531, bracket 989803170891 and sign 11516-000020 to Penn Care listings. Used empty bracket photo; alternate case photo retained only in uploads.
-- Remaining catalog images: 4-inch dressing, 25-person and 50-person first-aid kits, workplace bleeding-control station.
-- Stripe access and rendered desktop/mobile verification still outstanding; this is a draft branch, not a live deployment.
-
-- Added supplied 25-person (223-U/FAO) and 50-person (226-U/FAO) first-aid kit photos. Remaining product images: 4-inch dressing and workplace bleeding-control station.
-
-- Added advanced public bleeding-control station photo, matched MPN 80-0473 to Penn Care SKU 07-5032AD. Only 4-inch ETD photo remains missing; keep that listing text-only.
+Use Stripe connector directly; browser login is no longer required for supported account operations. Do not recreate the products above. Fetch remote branch before editing since local checkout may predate API commits. Do not store supplier costs, personal account details, credentials or private correspondence in this public repository.
