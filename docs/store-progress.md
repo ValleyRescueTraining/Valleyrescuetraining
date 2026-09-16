@@ -38,3 +38,20 @@ Extend the existing GitHub Pages store with individual products, workplace packa
 
 ## Resume
 Fetch codex/equipment-store (the local clone may predate remote commits). Review store/index.html, store/store.css and store/store.js. Complete checks above; the live main branch is unchanged.
+
+## Image batch received
+Zack uploaded the FRx product photo and three supplier kit contents labels. These have been inspected, optimized as WebP, and integrated as local site assets. Kit labels are explicitly captioned, not represented as product photos. Environment access recovered; continuing QA. Remaining individual-product photos and Stripe checkout are outstanding.
+
+Second batch: matching FRx pads and orange CAT photos added locally. Blue/black tourniquet variants excluded from orange listing. 30-0023OR.jpg failed upload; alternate 30-0023OR-2.jpg is usable. Local preview browser connection blocked; visual QA still outstanding.
+
+Third batch: verified 30-0032 6-inch dressing photo and integrated local WebP. Four-inch dressing image still needed.
+
+## Additional supplied photos — September 16
+- Added optimized local pocket-mask, QuikClot, cabinet, wall-bracket and triangular-sign images. Cabinet caption clarifies AED and case are separate.
+- Matched cabinet MPN 989803136531, bracket 989803170891 and sign 11516-000020 to Penn Care listings. Used empty bracket photo; alternate case photo retained only in uploads.
+- Remaining catalog images: 4-inch dressing, 25-person and 50-person first-aid kits, workplace bleeding-control station.
+- Stripe access and rendered desktop/mobile verification still outstanding; this is a draft branch, not a live deployment.
+
+- Added supplied 25-person (223-U/FAO) and 50-person (226-U/FAO) first-aid kit photos. Remaining product images: 4-inch dressing and workplace bleeding-control station.
+
+- Added advanced public bleeding-control station photo, matched MPN 80-0473 to Penn Care SKU 07-5032AD. Only 4-inch ETD photo remains missing; keep that listing text-only.
