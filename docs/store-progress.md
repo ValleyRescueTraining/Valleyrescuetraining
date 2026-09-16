@@ -10,17 +10,18 @@ Finish the existing GitHub Pages store with individual products, workplace packa
 - Stripe connection verified September 16, 2026. Created 16 equipment products; 10 have fixed USD prices. Six accessories/workplace items remain quote-only.
 - Existing training and sticker products and payment links unchanged.
 - Klarna available/enabled in default direct-account payment configuration. Affirm preference on but unavailable; capability inactive.
-- No new equipment payment links created; no equipment checkout enabled; live site unchanged.
+- No new equipment payment links created; equipment checkout remains pending.
+- September 16: user explicitly requested immediate catalog publication. PR #13 merged as 0fb27e5bc33dd36200f61878c72b2e624c4b9618; GitHub Pages deployment initiated. Launch uses inquiry CTAs while registration, tax and shipping are finalized.
 
 ## Remaining
 1. Confirm tax collection setup before enabling checkout. Do not enable automatic_tax without a confirmed active registration. Registration information must be confirmed with Zack.
 2. Finalize shipping charges and free arranged pickup; avoid promising universal free shipping. Shipping currently quote-before-payment.
 3. Create and verify equipment payment links, replace fixed-price inquiry buttons, preserve quote-based accessory/package ordering.
 4. Add product image URLs in Stripe after the site assets are publicly available.
-5. Complete rendered mobile/desktop and checkout verification, then publish via existing GitHub Pages workflow.
+5. Confirm Pages deployment and complete rendered mobile/desktop verification when browser connection is available. Checkout verification remains required before enabling equipment payments.
 6. Optional missing image: 4-inch trauma dressing (manufacturer 30-0031). Keep text-only until exact image is obtained.
 7. Supplier follow-up: FRx child-key/extra-pads offer, accessory and bundle costs, lead times and approved product photo use.
-8. Payment-provider follow-up: confirm Affirm inactive reason with Stripe; educational-services category 8299 is restricted per https://docs.stripe.com/payments/affirm. Do not change business classification merely to gain eligibility. Confirm provider eligibility for added equipment sales before promoting provider-specific financing.
+8. Affirm is deferred at Zack's request; it is not a launch blocker. Confirm provider eligibility for added equipment sales before promoting provider-specific financing.
 
 ## Stripe catalog mapping
 These are public-facing product/price identifiers, not credentials.
