@@ -14,6 +14,14 @@
 @media(prefers-reduced-motion:reduce){.equipment-store *{scroll-behavior:auto!important;transition:none!important}}
 
 .equipment-card .image-caption{font-size:.73rem;color:#bdbdbd;margin:0;padding:8px 14px;border-bottom:1px solid #333}
-/* Product photo galleries: full views stay available as links without JavaScript. */
-.product-gallery{background:#fff;color:#333;min-width:0}.gallery-main{text-decoration:none;cursor:zoom-in}.gallery-hint{display:flex;justify-content:space-between;gap:8px;font-size:.75rem;margin:0;padding:8px 14px;color:#555}.gallery-count{white-space:nowrap;font-variant-numeric:tabular-nums}.gallery-thumbs{display:flex;gap:8px;overflow-x:auto;padding:4px 14px 14px;scrollbar-width:thin}.gallery-thumb{display:flex;align-items:center;justify-content:center;flex:0 0 52px;height:52px;border:2px solid #ddd;border-radius:5px;background:#fff;padding:3px}.gallery-thumb img{width:100%;height:100%;object-fit:contain}.gallery-thumb[aria-current=true]{border-color:#d71920;box-shadow:0 0 0 1px #d71920}.gallery-thumb:focus-visible,.gallery-main:focus-visible{outline:3px solid #176fb0;outline-offset:2px}.photo-dialog{border:0;border-radius:10px;padding:52px 20px 16px;width:min(850px,90vw);max-height:90vh;overflow:auto;background:#fff;color:#222}.photo-dialog::backdrop{background:rgba(0,0,0,.85)}.photo-dialog>img{display:block;width:100%;height:min(65vh,750px);object-fit:contain}.photo-close{position:absolute;right:12px;top:10px;min-height:36px;padding:6px 14px;border:1px solid #ccc;border-radius:5px;background:#fff;color:#222;cursor:pointer;font:inherit}.photo-dialog-caption{text-align:center;font-size:.9rem;margin:12px 0 0}
+/* Store-specific gallery names avoid the legacy merchandise carousel styles. */
+.equipment-gallery{display:block;background:#fff;color:#333;min-width:0;margin:0;padding:0;overflow:hidden}
+.equipment-gallery .gallery-main{width:100%;height:320px;padding:18px;box-sizing:border-box;cursor:default}
+.equipment-gallery .gallery-main img{display:block;width:100%;height:100%;object-fit:contain}
+.equipment-gallery .gallery-thumbs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:0 12px 16px;margin:0}
+.equipment-gallery .gallery-thumb{display:flex;align-items:center;justify-content:center;flex:0 0 52px;width:52px;height:52px;box-sizing:border-box;border:2px solid #ddd;border-radius:5px;background:#fff;padding:3px}
+.equipment-gallery .gallery-thumb img{display:block;width:100%;height:100%;object-fit:contain}
+.equipment-gallery .gallery-thumb[aria-current=true]{border-color:#d71920;box-shadow:0 0 0 1px #d71920}
+.equipment-gallery .gallery-thumb:focus-visible{outline:3px solid #176fb0;outline-offset:2px}
+@media(max-width:580px){.equipment-gallery .gallery-main{height:clamp(280px,85vw,400px);padding:16px}}
 .cat-color-label{display:block;font-size:.85rem;font-weight:700;margin:12px 0 6px}#cat-color{width:100%;min-height:44px;padding:10px;border:1px solid #666;border-radius:5px;background:#181818;color:#fff;font:inherit}#cat-use{padding:0;margin:8px 0 14px;color:#ddd}

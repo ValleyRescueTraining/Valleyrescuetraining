@@ -14,10 +14,7 @@ if (filters) {
   document.getElementById('product-count').textContent = count + ' products shown';
  });
 }
-const photoDialog = document.querySelector('.photo-dialog');
-const dialogImage = photoDialog?.querySelector('img');
-let photoOpener;
-document.querySelectorAll('.product-gallery').forEach(gallery => {
+document.querySelectorAll('.equipment-gallery').forEach(gallery => {
  const main = gallery.querySelector('.gallery-main');
  const img = main.querySelector('img');
  const fallback = main.querySelector('.photo-fallback');
@@ -30,24 +27,11 @@ document.querySelectorAll('.product-gallery').forEach(gallery => {
    event.preventDefault();
    img.hidden = false; fallback.hidden = true;
    img.src = thumb.href; img.alt = thumb.getAttribute('aria-label');
-   main.href = thumb.href;
    gallery.querySelectorAll('.gallery-thumb').forEach(t => t.setAttribute('aria-current', String(t === thumb)));
    gallery.querySelector('.gallery-count').textContent = thumb.dataset.view + ' / ' + gallery.querySelectorAll('.gallery-thumb').length;
   });
  });
- main.addEventListener('click', event => {
-  if (!photoDialog || typeof photoDialog.showModal !== 'function') return;
-  event.preventDefault(); photoOpener = main;
-  dialogImage.src = main.href; dialogImage.alt = img.alt;
-  photoDialog.querySelector('.photo-dialog-caption').textContent = img.alt;
-  photoDialog.showModal();
- });
 });
-if (photoDialog) {
- photoDialog.querySelector('.photo-close').addEventListener('click', () => photoDialog.close());
- photoDialog.addEventListener('click', event => { if (event.target === photoDialog) photoDialog.close(); });
- photoDialog.addEventListener('close', () => photoOpener?.focus());
-}
 const catCard = document.getElementById('cat');
 const catColor = document.getElementById('cat-color');
 if (catCard && catColor) {
