@@ -8,6 +8,8 @@
     <loc>https://valleyrescuetraining.com/request/</loc>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://valleyrescuetraining.com/schools/</loc><priority>0.8</priority></url>
+  <url><loc>https://valleyrescuetraining.com/lifevac/</loc><priority>0.6</priority></url>
   <url>
     <loc>https://valleyrescuetraining.com/store/</loc>
     <priority>0.6</priority>
