@@ -52,4 +52,5 @@
     <loc>https://valleyrescuetraining.com/courses/stop-the-bleed/</loc>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://valleyrescuetraining.com/about/</loc><priority>0.7</priority></url>
 </urlset>
